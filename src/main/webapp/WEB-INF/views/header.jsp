@@ -30,57 +30,9 @@
 <link href="<%=request.getContextPath()%>/resources/css/responsive.css" rel="stylesheet">
 <link href="<%=request.getContextPath()%>/resources/css/jquery-ui.css" rel="stylesheet">
 <link href="<%=request.getContextPath()%>/resources/css/jquery.fancybox.css" rel="stylesheet">
-<link href="./resources/css/login.css" rel="stylesheet">
-<link href="./resources/css/models.less.css" rel="stylesheet">
-<link href="./resources/css/forms.less.css" rel="stylesheet">
-<link  rel="stylesheet" href="./resources/css/login_style.css">
 <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet" type="text/css">
 <link href='//fonts.googleapis.com/css?family=Oxygen:400,700,300' rel='stylesheet' type='text/css'>
 
-<!-- js for login and signup forms -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<!-- pop-up-box -->
-<script src="./resources/js/jquery.magnific-popup.js" type="text/javascript"></script>
- <script>
-			$(document).ready(function() {
-				$('.popup-with-zoom-anim').magnificPopup({
-					type: 'inline',
-					fixedContentPos: false,
-					fixedBgPos: true,
-					overflowY: 'auto',
-					closeBtnInside: true,
-					preloader: false,
-					midClick: true,
-					removalDelay: 300,
-					mainClass: 'my-mfp-zoom-in'
-				});
-			});
-		</script>
-<%-- <link href="${pageContext.request.contextPath}/js/login.js"> --%>
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-<!-- <script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
-	<script 
-        src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-	<link rel="stylesheet" type="text/css" 
-        href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/> -->
-
-<script>
-        addEventListener("load", function () {
-            setTimeout(hideURLbar, 0);
-        }, false);
-
-        function hideURLbar() {
-            window.scrollTo(0, 1);
-        }
-    </script>
-    <!-- //Meta-Tags -->
-    <!-- Index-Page-CSS -->
-    <link rel="stylesheet" href="./resources/css/NewLogin.css" type="text/css" media="all">
     <!-- onlinefonts -->
     <link href="//fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
 </head>
@@ -141,7 +93,7 @@
 						</select></li>
 						<li>
 				 
-						<button style="background-color: #005580; color: white; height: 50px;font-size: 15px;" type="button" class="btn btn-success playerInfo" data-xyz="value" data-toggle="model" data-target="#myModal12">SIGN UP</button>
+						<button style="background-color: #005580; color: white; height: 50px;font-size: 15px;" type="button" class="btn btn-success playerInfo"  data-toggle="model" data-target="#loginform">SIGN UP</button>
 						
 						
 						</li>
@@ -209,82 +161,82 @@
 	</header>
 	
 	
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
+<!--   <div class="modal-dialog" role="document"> -->
+<!--     <div class="modal-content"> -->
 
-      <div class="modal-body">
-        <div class="container1">
-        <div class="card"></div>
-        <div class="card">
-          <h1 class="title">Login</h1>
-          <form method="POST" action="http://www.risingelection.com/user/index1.php">
-            <div class="input-container">
-              <input type="text" id="Username1" name="username" required="required"/>
-              <label for="Username">Username</label>
-              <div class="bar"></div>
-            </div>
-            <div class="input-container">
-              <input type="password" id="Password1" name="password" required="required"/>
-              <label for="Password">Password</label>
-              <div class="bar"></div>
-            </div>
-            <div class="button-container">
-              <button type="submit"><span>Go</span></button>
-            </div>
-            <br>
-            <div class="footer"><a href="#">Forgot your password?</a></div>
-          </form>
-        </div>
-        <div class="card alt">
-          <div class="toggle"></div>
-          <h1 class="title">Register
+<!--       <div class="modal-body"> -->
+<!--         <div class="container1"> -->
+<!--         <div class="card"></div> -->
+<!--         <div class="card"> -->
+<!--           <h1 class="title">Login</h1> -->
+<!--           <form method="POST" action="http://www.risingelection.com/user/index1.php"> -->
+<!--             <div class="input-container"> -->
+<!--               <input type="text" id="Username1" name="username" required="required"/> -->
+<!--               <label for="Username">Username</label> -->
+<!--               <div class="bar"></div> -->
+<!--             </div> -->
+<!--             <div class="input-container"> -->
+<!--               <input type="password" id="Password1" name="password" required="required"/> -->
+<!--               <label for="Password">Password</label> -->
+<!--               <div class="bar"></div> -->
+<!--             </div> -->
+<!--             <div class="button-container"> -->
+<!--               <button type="submit"><span>Go</span></button> -->
+<!--             </div> -->
+<!--             <br> -->
+<!--             <div class="footer"><a href="#">Forgot your password?</a></div> -->
+<!--           </form> -->
+<!--         </div> -->
+<!--         <div class="card alt"> -->
+<!--           <div class="toggle"></div> -->
+<!--           <h1 class="title">Register -->
             
-          </h1>
-    <div class="close"></div>
-          <form method="POST" action="http://www.risingelection.com/user/registration.php" id="ragisterform">
+<!--           </h1> -->
+<!--     <div class="close"></div> -->
+<!--           <form method="POST" action="http://www.risingelection.com/user/registration.php" id="ragisterform"> -->
           
-          <div class="input-container">
-              <input type="text" id="Username" name="Username"   required="required"/>
-              <label for="Username">Name</label>
-              <div class="bar"></div>
-            </div>
+<!--           <div class="input-container"> -->
+<!--               <input type="text" id="Username" name="Username"   required="required"/> -->
+<!--               <label for="Username">Name</label> -->
+<!--               <div class="bar"></div> -->
+<!--             </div> -->
             
             
-            <div class="input-container">
-              <input type="number" id="mob" name="mob" min="0" required="required"/>
-              <label for="Username">Mobile Number</label>
-              <div class="bar"></div>
-            </div>
+<!--             <div class="input-container"> -->
+<!--               <input type="number" id="mob" name="mob" min="0" required="required"/> -->
+<!--               <label for="Username">Mobile Number</label> -->
+<!--               <div class="bar"></div> -->
+<!--             </div> -->
 
-            <div class="input-container">
-              <input type="text" id="email" name="email" required="required"  onchange="emailv(this.value)"/>
-               <div class="bar"></div>
+<!--             <div class="input-container"> -->
+<!--               <input type="text" id="email" name="email" required="required"  onchange="emailv(this.value)"/> -->
+<!--                <div class="bar"></div> -->
               
-              <label for="Username">Email</label>
-              <div class="bar"></div>
-               <div class="erroremail"></div>
-            </div>
-            <div class="input-container">
-              <input type="password" id="Password" name="Password" required="required"/>
-              <label for="Password">Password</label>
-              <div class="bar"></div>
-            </div>
-            <div class="input-container">
-              <input type="password" id="RepeatPassword" required="required"/>
-              <label for="RepeatPassword">Repeat Password</label>
-              <div class="bar"></div>
-            </div>
+<!--               <label for="Username">Email</label> -->
+<!--               <div class="bar"></div> -->
+<!--                <div class="erroremail"></div> -->
+<!--             </div> -->
+<!--             <div class="input-container"> -->
+<!--               <input type="password" id="Password" name="Password" required="required"/> -->
+<!--               <label for="Password">Password</label> -->
+<!--               <div class="bar"></div> -->
+<!--             </div> -->
+<!--             <div class="input-container"> -->
+<!--               <input type="password" id="RepeatPassword" required="required"/> -->
+<!--               <label for="RepeatPassword">Repeat Password</label> -->
+<!--               <div class="bar"></div> -->
+<!--             </div> -->
             
-            <div class="button-container">
-              <button type="submit"><span>Next</span></button>
-            </div>
-          </form>
-        </div>
-      </div>
+<!--             <div class="button-container"> -->
+<!--               <button type="submit"><span>Next</span></button> -->
+<!--             </div> -->
+<!--           </form> -->
+<!--         </div> -->
+<!--       </div> -->
 
-      </div>
-    </div>
-  </div>
+<!--       </div> -->
+<!--     </div> -->
+<!--   </div> -->
 
 <div class="modal fade loginmodel" id="myModal12" tabindex="-1" role="dialog" >
 	<div class="login-section">
@@ -394,7 +346,7 @@ $("#step5-post").click(function()
 
 
 </script>
-
+<%@include file="LoginSignUp.jsp"%>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
 
