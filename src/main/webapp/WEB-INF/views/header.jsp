@@ -93,7 +93,7 @@
 						</select></li>
 						<li>
 				 
-						<button style="background-color: #005580; color: white; height: 50px;font-size: 15px;" type="button" class="btn btn-success playerInfo"  data-toggle="model" data-target="#loginform">SIGN UP</button>
+						<button style="background-color: #005580; color: white; height: 50px;font-size: 15px;" type="button" class="btn btn-success playerInfo"  data-toggle="model" data-target="#loginform1" id="sign">SIGN UP</button>
 						
 						
 						</li>

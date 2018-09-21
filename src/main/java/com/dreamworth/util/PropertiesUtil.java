@@ -1,4 +1,4 @@
-package org.com.util;
+package com.dreamworth.util;
 
 import java.util.Properties;
 

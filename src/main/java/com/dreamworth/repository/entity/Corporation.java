@@ -1,4 +1,4 @@
-package org.com.yojana1.pojo;
+package com.dreamworth.repository.entity;
 
 public class Corporation {
 

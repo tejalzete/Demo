@@ -1,4 +1,4 @@
-package org.com.entity;
+package com.dreamworth.repository.entity;
 
 public class City {
 

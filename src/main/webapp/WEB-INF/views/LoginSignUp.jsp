@@ -1,19 +1,20 @@
+
 <!DOCTYPE html>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="theme-color" content="#0f9d58" />
-    <link rel="shortcut icon" href="https://www.geeksforgeeks.org/gfg.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="https://www..org/gfg.png" type="image/x-icon" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" async></script>
-    <link rel="stylesheet" href="https://auth.geeksforgeeks.org/css/bootstrap-social.css">
+    <link rel="stylesheet" href="https://auth..org/css/bootstrap-social.css">
     <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
     <script src="https://apis.google.com/js/platform.js" async></script>
     <title>Election</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://auth.geeksforgeeks.org/css/typeahead.css">
+    <link rel="stylesheet" href="https://auth..org/css/typeahead.css">
     <style>
       *,
       *:after,
@@ -575,11 +576,11 @@
   </head>
   <body >
     <div class="spinner-loading-overlay"></div>
-    <div class="login-modal-div" id="loginform" style="display: none;">
+    <div class="login-modal-div" id="loginform1" style="display: none;">
       <div class="modal-content">
        <div class="close-div"><span class="close">&times;</span></div> 
         <div class="center">
-          <a href="https://www.geeksforgeeks.org">
+          <a href="https://www..org">
             <img width="250px" src="">
           </a>
         </div>
@@ -592,54 +593,64 @@
             <label class="tab-label" for="tab2">Sign Up</label>
 
             <section id="content1">
-              <form method="POST" class="login-form" id="Login">
+              <form method="POST" class="login-form" id="Login"><!-- 3 -->
                 <input type="hidden" name="reqType" value="Login">
                 <div class="modal-form-group">
                   <div class="extra"></div>
                 </div>
                 <div class="modal-form-group">
                   <i class="input-icon material-icons">account_circle</i>
-                  <input name="user_id" id="user_id" required="required" type="text" class="modal-form-input" placeholder="Username or email">
+                  <input name="lemail" id="lemail" required="required" type="text" class="modal-form-input" placeholder="Username or email">
                 </div>
                 <div class="modal-form-group">
                   <i class="input-icon material-icons">lock</i>
-                  <input name="password" id="password" type="password" required="required" class="modal-form-input" placeholder="Password">
+                  <input name="securepassword" id="securepassword" type="password" required="required" class="modal-form-input" placeholder="Password">
                 </div>
                 <div class="modal-form-group left">
                   <input name="rem" type="hidden" value="false">
-                  <input name="to" type="hidden" value="https://contribute.geeksforgeeks.org/request-article/request-article.php">
+                  <input name="to" type="hidden" value="https://contribute..org/request-article/request-article.php">
                   <input name="rem" type="checkbox" checked>
                   <label class="modal-form-label" for="remember">Remember me</label>
                   <a class="pull-right forgot-link">Forgot Password</a>
                 </div>
-                <button class="btn btn-green signin-button" type="submit">Sign In</button>
+                <button class="btn btn-green signin-button" type="submit" id="signin">Sign In</button>
               </form>
             </section>
             <section id="content2">
-              <form method="POST" class="login-form" id="Register">
+              <form method="POST" class="login-form"  id="Register"><!-- 1 -->
                 <div class="modal-form-group">
                   <div class="extra"></div>
                 </div>
-                <div class="modal-form-group">
-                  <i class="input-icon material-icons">account_circle</i>
-                  <input name="user_id" id="user_id" type="text" required="required" class="modal-form-input" placeholder="Username">
-                </div>
+                <input name="user_Id" id="user_id" type="hidden" required="required" class="modal-form-input" >
+<!--                 <div class="modal-form-group"> -->
+<!--                   <i class="input-icon material-icons">account_circle</i> -->
+<!--                   <input name="name" id="name" type="text" required="required" class="modal-form-input" placeholder="Username"> -->
+<!--                 </div> -->
                 <div class="modal-form-group">
                   <i class="input-icon material-icons">email</i>
-                  <input name="email" id="email" type="email" required="required" class="modal-form-input" placeholder="E-mail">
+                  <input name="email" id="email" type="email" maxlength="60" lengthrequired="required" class="modal-form-input" placeholder="E-mail">
                 </div>
                 <div class="modal-form-group">
                   <i class="input-icon material-icons">lock</i>
-                  <input name="password" id="password" type="password" required="required" class="modal-form-input" placeholder="Password">
+                  <input name="secreateKey" id="secreateKey" type="password" maxlength="12" required="required" class="modal-form-input" placeholder="Password">
                 </div>
                  <div class="modal-form-group">
                   <i class="input-icon material-icons">lock</i>
-                  <input name="repassword" id="repassword" type="password" required="required" class="modal-form-input" placeholder="Password">
+                  <input name="repassword" id="repassword" type="password" maxlength="12" required="required" class="modal-form-input" placeholder="Confirm Password">
                 </div>
+<!--                 <div class="modal-form-group"> -->
+<!--                   <i class="input-icon material-icons">account_circle</i> -->
+<!--                   <input name="display_name" id="display_name" type="text" required="required" class="modal-form-input" placeholder="Display Name"> -->
+<!--                 </div> -->
                 <div class="modal-form-group">
-                  <center><div id="registerCaptcha"></div></center>
+                  <i class="input-icon material-icons">phone</i>
+                  <input name="contact" id="contact" type="text" required="required"  maxlength="10" class="modal-form-input" placeholder="mobile no">
                 </div>
-                <button class="btn btn-green signup-button" type="submit">Sign Up</button>
+                
+<!--                 <div class="modal-form-group"> -->
+<!--                   <center><div id="registerCaptcha"></div></center> -->
+<!--                 </div> -->
+                <button class="btn btn-green signup-button" type="submit" id="signUp">Sign Up</button>
               </form>
             </section>
             <div class="social-signin-div">
@@ -657,12 +668,12 @@
                 </a>  
               </div>
               <div class="tnc-div">
-                  By creating this account, you agree to our <a href="https://www.geeksforgeeks.org/privacy-policy/" target="_blank">Privacy Policy</a> & <a href="https://www.geeksforgeeks.org/cookie-policy/" target="_blank">Cookie Policy</a>.
+                  By creating this account, you agree to our <a href="https://www..org/privacy-policy/" target="_blank">Privacy Policy</a> & <a href="https://www..org/cookie-policy/" target="_blank">Cookie Policy</a>.
               </div>
             </div>
           </div>
           <div class="forgot-div">
-            <form class="login-form" id="Forgot">
+            <form class="login-form" id="Forgot"><!-- 2 -->
               <input type="hidden" name="reqType" value="Forgot">
               <div class="modal-form-group">
                 <div class="extra"></div>
@@ -696,10 +707,10 @@
 
   gtag('config', 'UA-112208093-1');
 </script>
-    <script src="https://auth.geeksforgeeks.org/js/typeahead.bundle.min.js"></script>
+    <script src="https://auth..org/js/typeahead.bundle.min.js"></script>
     <script>
       //google captch initialization for register/forgot section.
-      var captchaSiteKey = '6LexF0sUAAAAADiQjz9BMiSrqplrItl-tWYDSfWa';
+      var captchaSiteKey = '';
       var forgotWidgetId;
       var registerWidgetId;
       var onloadCallback = function() {
@@ -734,61 +745,16 @@
         }
       });
 
-      // suggest organization.
-      /*
-      var instituteListBlood = new Bloodhound({
-        initialize: false,
-        datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
-        queryTokenizer: Bloodhound.tokenizers.whitespace,
-        sufficient: 5,
-        prefetch: { 
-          url: 'https://auth.geeksforgeeks.org/ajax/getInstituteAjax.php'
-        },
-        remote: {
-          url: 'https://auth.geeksforgeeks.org/ajax/getInstituteAjax.php?q=%QUERY',
-          wildcard: '%QUERY',
-          filter: function (data) {
-            instituteListBlood.add(data);
-            return data;
-          }
-        }
-      });
-
-      $(document).ready(function () {
-        instituteListBlood.clearPrefetchCache();
-        instituteListBlood.initialize();
-        $('input.typeahead').typeahead({
-          minLength: 2,
-          dynamic: false,
-          highlight: true,
-          cache: "sessionStorage",
-          searchOnfocus: true,
-          offset: true,
-          blurOnTab: true
-        }, {
-          displaykey: 'value',
-          limit: 15,
-          source: instituteListBlood.ttAdapter(),
-          accent: true,
-          templates: {
-          empty: [
-                  ''
-                  ].join('\n')
-          }
-        });
-      });
-*/
+     
       $(document).ready(function(){
-
-    	
     	
     	  // dismiss modal when click on close icon.
         $('body').on('click', '.close', function(){
           $(this).closest('.login-modal-div').fadeOut('fast');
         })
 
-        $('body').on('click', function(){
-        	$('#loginform').show();
+        $('#sign').on('click', function(){
+        	$('#loginform1').show();
         })
         
         //toggle between forgot div and login div.
@@ -823,26 +789,67 @@
           $('.spinner-loading-overlay').show();
           this1.find(".extra").empty();
           this1.find('input[type=submit]').attr('disabled', true);
+          $("p").remove(".error");
+          var request={};
+          var url;
+          if(e.target.id==="Login"){
+        	url= 'http://localhost:8089/Demo/validateLogin';
+        	request.email=$("#lemail").val();
+            request.password=$("#securepassword").val();
+          }else if(e.target.id==="Register"){
+        	url= 'http://localhost:8089/Demo/register';
+          	request.email=$("#email").val();
+          	request.password=$("#secreateKey").val();
+          	request.repassword=$("#repassword").val();
+          	request.mobileno=$("#contact").val();
+          }else if(e.target.id=="Forgot"){
+        	url= 'http://localhost:8089/Demo/forgot'; 
+        	request.email=$("#email").val();
+          }
+          
           $.ajax({
             type: "POST",
-            url: 'http://localhost:8088/Elections/register',
-            contentType : 'application/json',
-            data: $(this).serializeArray(),
-            dataType: "json",
+            url: url,
+            contentType: 'application/json',
+            dataType: 'json',
+            data: JSON.stringify(request),
+            timeout : 100000,
             success: function( data ) {
               this1.find('input[type=submit]').attr('disabled', false);
               $('.spinner-loading-overlay').hide();
-//               if( data.redirect ) {
-//                 redirect( data.redirect );
-//               } else if( data.extra ) {
-                
-                this1.find(".extra").append("<p style=\"background-color: green;\">"+data.Success+"</p>");
-//               }
-            },
+              if(e.target.id==="Login"){
+            	if(data.fatalError)
+            		this1.find(".extra").append("<p class=\"error\" style=\"background-color: red;\">"+data.message.fail+"</p>");
+            	else{
+            		$('#Login').trigger("reset");
+            		$("#loginform1").hide();
+            		alert("Login successfully");
+            	}
+              }
+             if(e.target.id==="Register"){
+            	 if(data.fatalError){
+            		if(data.message.mobile!=undefined)
+            		this1.find("#contact").after("<p class=\"error\" style=\"background-color: red;\">"+data.message.mobile+"</p>"); 
+             		if(data.message.email!=undefined)
+            	 	this1.find("#email").after("<p class=\"error\" style=\"background-color: red;\">"+data.message.email+"</p>");
+             		if(data.message.repassword!=undefined)
+             		this1.find("#repassword").after("<p class=\"error\" style=\"background-color: red;\">"+data.message.repassword+"</p>");
+             		if(data.message.fail!=undefined)
+             		this1.find(".extra").after("<p class=\"error\" style=\"background-color: red;\">"+data.message.fail+"</p>");
+            	 }
+             	else
+             	{
+             		if(data.message.success!=undefined){
+             			$('#Register').trigger("reset");
+             			this1.find(".extra").append("<p style=\"background-color: Green;\">"+data.message.success+"</p>");
+             		}
+                 		
+             	}
+            }
+           },
             error: function(jqXHR, exception, errorThrown) {
               this1.find('input[type=submit]').attr('disabled', false);
               $('.spinner-loading-overlay').hide();
-              console.log( "An error occurred" );
             },
             complete: function() {
               this1.find('input[type=submit]').attr('disabled', false);
@@ -865,7 +872,8 @@
         });
 
       });
-
     </script>
+    
+    
   </body>
 </html>
