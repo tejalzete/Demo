@@ -3,6 +3,7 @@ package com.dreamworth.repository.impl;
 import java.util.List;
 
 import org.hibernate.Criteria;
+import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -55,7 +56,7 @@ public class UserRegistrationRepositoryImpl implements UserRepository {
 		factory = HibernateUtil.getSessionFactory();
 		Session session = factory.openSession();
 		Criteria criteria = session.createCriteria(UserRegistrationEntity.class);
-		 criteria.add(Restrictions.eq("email", email));
+		criteria.add(Restrictions.eq("email", email));
 		List results = criteria.list();
 		if (results.size() == 1) {
 			return true;
@@ -66,20 +67,44 @@ public class UserRegistrationRepositoryImpl implements UserRepository {
 
 	@Override
 	public boolean validateLogin(String email, String password) {
-		factory=HibernateUtil.getSessionFactory();
-		Session session=factory.openSession();
-		Criteria crit=session.createCriteria(UserRegistrationEntity.class);
+		factory = HibernateUtil.getSessionFactory();
+		Session session = factory.openSession();
+		Criteria crit = session.createCriteria(UserRegistrationEntity.class);
 		crit.add(Restrictions.eq("email", email));
 		crit.add(Restrictions.eq("password", password));
-		List list=crit.list();
-		if(list.size()==1) {
+		List list = crit.list();
+		if (list.size() == 1) {
 			return true;
-		}
-		else {
+		} else {
 			return false;
 		}
-			
-		
+
 	}
 
+	@Override
+	public String getVerifiedUser(String email) {
+		factory = HibernateUtil.getSessionFactory();
+		Session session = factory.openSession();
+		Criteria crit = session.createCriteria(UserRegistrationEntity.class);
+		crit.add(Restrictions.eq("email", email));
+		List list = crit.list();
+		if (list.size() > 0) {
+			UserRegistrationEntity registrationEntity = (UserRegistrationEntity) list.get(0);
+			return registrationEntity.getMobileno();
+		} else {
+			return null;
+		}
+	}
+
+	@Override
+	public boolean updateOTP(String otp, String email) {
+		factory = HibernateUtil.getSessionFactory();
+		Session session = factory.openSession();
+		Criteria crit = session.createCriteria(UserRegistrationEntity.class);
+		crit.add(Restrictions.eq("email", email));
+		UserRegistrationEntity registrationEntity = (UserRegistrationEntity) crit.list().get(0);
+		registrationEntity.setOtp(otp);
+		session.update(registrationEntity);
+		return true;
+	}
 }

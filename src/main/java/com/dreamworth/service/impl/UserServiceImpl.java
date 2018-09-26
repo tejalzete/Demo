@@ -47,5 +47,19 @@ public class UserServiceImpl implements RegistrationService {
 		
 		return dao.validateLogin(email, password);
 	}
+	
+	@Override
+	public String getVerifiedUser(String email) {
+		
+		return dao.getVerifiedUser(email);
+	}
+	
+	@Override
+	public boolean updateOTP(String otp, String email) {
+		
+		return dao.updateOTP(otp,email);
+	}
+	
+	
 
 }

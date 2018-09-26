@@ -7,4 +7,6 @@ public interface UserRepository {
 	public boolean isMobileNumberPresent(String mobile);
 	public boolean isEmailIdPresent(String email);
 	public boolean validateLogin(String email,String password);
+	public String getVerifiedUser(String email);
+	public boolean updateOTP(String otp, String email);
 }

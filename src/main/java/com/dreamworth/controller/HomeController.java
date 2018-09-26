@@ -2,6 +2,7 @@ package com.dreamworth.controller;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,6 +16,7 @@ import com.dreamworth.controller.beans.LoginRequestBean;
 import com.dreamworth.controller.beans.Response;
 import com.dreamworth.controller.beans.UserRequestBean;
 import com.dreamworth.service.RegistrationService;
+import com.dreamworth.util.SendSMS;
 
 @Controller
 public class HomeController {
@@ -50,7 +52,7 @@ public class HomeController {
 			map.put("mobile", "mobile already present");
 			response.setFatalError(true);
 		}
-		if (response.isFatalError()==false && service.registerUserDetails(request)) {
+		if (response.isFatalError() == false && service.registerUserDetails(request)) {
 			map.put("success", "Registrion successfully completed");
 		} else {
 			map.put("fail", "Registrion failed!");
@@ -94,13 +96,35 @@ public class HomeController {
 		Map<String, String> map = new HashMap<>();
 		Response response = new Response();
 		boolean result = service.validateLogin(requestBean.getEmail(), requestBean.getPassword());
-		if(!result) {
+		if (!result) {
 			map.put("fail", "Invalid Credentials");
 			response.setFatalError(true);
 		}
 		response.setMessage(map);
 		return response;
 
+	}
+
+	@RequestMapping(value = "/sendOTP", method = RequestMethod.POST)
+	public Response sendOTP(@RequestParam("email") String email) {
+		Map<String, String> map = new HashMap<>();
+		Response response = new Response();
+		
+		String mobileNo = service.getVerifiedUser(email);
+		if (mobileNo != null) {
+			String otp = String.valueOf(100000 + new Random().nextInt() * 900000);
+			if(service.updateOTP(otp,email)){
+				SendSMS.sendOTP(mobileNo, otp);	
+			}else {
+				map.put("otp", "Otp sent successfully.");
+			}
+			
+			map.put("otp", "Otp sent successfully.");
+		} else {
+
+			map.put("otp", "Email not present");
+		}
+		return response;
 	}
 
 	public RegistrationService getService() {

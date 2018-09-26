@@ -29,6 +29,11 @@ public class UserRegistrationEntity {
 	@Column(length=12)
 	private String repassword;
 	
+	@Column(length=20)
+	private String otpDateTime;
+		
+	@Column(length=20)
+	private String otp;
 	
 	public int getUser_Id() {
 		return user_Id;
@@ -59,6 +64,17 @@ public class UserRegistrationEntity {
 	}
 	public void setMobileno(String mobileno) {
 		this.mobileno = mobileno;
+	}
+	public String getOtpDateTime() {
+		return otpDateTime;
+	}
+	public void setOtpDateTime(String otpDateTime) {
+		this.otpDateTime = otpDateTime;
+	}
+	public String getOtp() {
+		return otp;
+	}
+	public void setOtp(String otp) {
+		this.otp = otp;
 	}	
-	
 }
