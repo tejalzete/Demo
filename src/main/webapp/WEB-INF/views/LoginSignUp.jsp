@@ -689,15 +689,15 @@
                 <p class="left">Reset Password.</p>
               </div>
               <div class="modal-form-group">
-                <i class="input-icon material-icons"></i>
+                <i class="input-icon material-icons">phone</i>
                 <input name="fuser" id="fuser" type="text" class="modal-form-input" placeholder="enter otp">
               </div>
               <div class="modal-form-group">
-                <i class="input-icon material-icons"></i>
+                <i class="input-icon material-icons">lock</i>
                 <input name="pass" id="pass" type="password" class="modal-form-input" placeholder="password">
               </div>
               <div class="modal-form-group">
-                <i class="input-icon material-icons"></i>
+                <i class="input-icon material-icons">lock</i>
                 <input name="restPass" id="restPass" type="password" class="modal-form-input" placeholder="confirm password">
               </div>
               
