@@ -104,7 +104,8 @@ public class UserRegistrationRepositoryImpl implements UserRepository {
 		crit.add(Restrictions.eq("email", email));
 		UserRegistrationEntity registrationEntity = (UserRegistrationEntity) crit.list().get(0);
 		registrationEntity.setOtp(otp);
-		session.update(registrationEntity);
+		session.saveOrUpdate(registrationEntity);
+		session.beginTransaction().commit();
 		return true;
 	}
 }

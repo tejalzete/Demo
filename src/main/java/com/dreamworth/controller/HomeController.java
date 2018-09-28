@@ -105,25 +105,26 @@ public class HomeController {
 
 	}
 
-	@RequestMapping(value = "/sendOTP", method = RequestMethod.POST)
-	public Response sendOTP(@RequestParam("email") String email) {
+	@RequestMapping(value = "/forogtPassword", method = RequestMethod.POST)
+	public @ResponseBody Response sendOTP(@RequestParam("email") String email) {
 		Map<String, String> map = new HashMap<>();
 		Response response = new Response();
 		
 		String mobileNo = service.getVerifiedUser(email);
 		if (mobileNo != null) {
-			String otp = String.valueOf(100000 + new Random().nextInt() * 900000);
+			String otp = new Random().nextInt(999999)+"";
 			if(service.updateOTP(otp,email)){
-				SendSMS.sendOTP(mobileNo, otp);	
+				//SendSMS.sendOTP(mobileNo, otp);	
 			}else {
-				map.put("otp", "Otp sent successfully.");
+				map.put("otp", "OTP generatin failed.");
 			}
-			
 			map.put("otp", "Otp sent successfully.");
 		} else {
-
-			map.put("otp", "Email not present");
+			map.put("email", "Email not present");
+			response.setFatalError(true);
 		}
+		
+		response.setMessage(map);
 		return response;
 	}
 
