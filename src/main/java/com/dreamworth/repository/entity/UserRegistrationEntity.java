@@ -1,12 +1,17 @@
 package com.dreamworth.repository.entity;
 
 
+
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 @Table(name="USER_REGISTRATION")
@@ -29,11 +34,14 @@ public class UserRegistrationEntity {
 	@Column(length=12)
 	private String repassword;
 	
-	@Column(length=20)
-	private String otpDateTime;
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date otpDateTime;
 		
-	@Column(length=20)
+	@Column(length=6)
 	private String otp;
+	
+	@Column(length=2)
+	private int loginAttempt;
 	
 	public int getUser_Id() {
 		return user_Id;
@@ -65,10 +73,10 @@ public class UserRegistrationEntity {
 	public void setMobileno(String mobileno) {
 		this.mobileno = mobileno;
 	}
-	public String getOtpDateTime() {
+	public Date getOtpDateTime() {
 		return otpDateTime;
 	}
-	public void setOtpDateTime(String otpDateTime) {
+	public void setOtpDateTime(Date otpDateTime) {
 		this.otpDateTime = otpDateTime;
 	}
 	public String getOtp() {
@@ -76,5 +84,12 @@ public class UserRegistrationEntity {
 	}
 	public void setOtp(String otp) {
 		this.otp = otp;
-	}	
+	}
+	public int getLoginAttempt() {
+		return loginAttempt;
+	}
+	public void setLoginAttempt(int loginAttempt) {
+		this.loginAttempt = loginAttempt;
+	}
+	
 }

@@ -1,5 +1,6 @@
 package com.dreamworth.controller.beans;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class Response {
@@ -12,6 +13,7 @@ public class Response {
 	}
 
 	public void setMessage(Map<String, String> message) {
+		
 		this.message = message;
 	}
 

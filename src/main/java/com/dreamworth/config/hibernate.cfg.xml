@@ -11,15 +11,19 @@
 
 		<property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
 
-		<property name="hibernate.connection.username">system</property>
-
-		<property name="hibernate.connection.password">manager</property>
-		<property name = "hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+		<property name="hibernate.connection.username">SYSTEM</property>
+		 
+		<property name="hibernate.connection.password">SYSTEM</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
 		<property name="hibernate.show_sql">true</property>
 		<property name="hibernate.hbm2ddl.auto">update</property>
-		<property name="javax.persistence.schema-generation.database.action">create</property>
-		
+<!--  		<property name="hibernate.default_schema">SYSTEM</property> -->
+	<property name="javax.persistence.schema-generation.database.action">create</property>
 		<mapping class="com.dreamworth.repository.entity.UserRegistrationEntity" />
+		<mapping class="com.dreamworth.repository.entity.Comments" />
+		<mapping class="com.dreamworth.repository.entity.QuestionEntity" />
+		<mapping class="com.dreamworth.repository.entity.AdvertiseEntity" />
+		
 		
 	</session-factory>
 </hibernate-configuration>

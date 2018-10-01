@@ -135,7 +135,7 @@
 									Jayalalithaa made history in Tamil Nadu. Despite All India Anna
 									Dravida Munnetra Kazahagam's seats share going down, Amma did
 									prove most of the exit...<a
-										href="http://www.risingelection.com/blogs/why-did-aiadmk-win-in-tamil-nadu">Read
+										href="./view?name=why_did_aiadmk_win_in_tamil_nadu">Read
 										More</a>
 								</p>
 							</article>

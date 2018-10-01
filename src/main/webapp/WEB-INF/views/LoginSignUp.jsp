@@ -624,11 +624,11 @@
                 <input name="user_Id" id="user_id" type="hidden" required="required" class="modal-form-input" >
                 <div class="modal-form-group">
                   <i class="input-icon material-icons">email</i>
-                  <input name="email" id="email" type="email" maxlength="60" lengthrequired="required" class="modal-form-input" placeholder="E-mail">
+                  <input name="email" id="email" type="email" maxlength="60" required="required" class="modal-form-input" placeholder="E-mail">
                 </div>
                 <div class="modal-form-group">
                   <i class="input-icon material-icons">lock</i>
-                  <input name="secreateKey" id="secreateKey" type="password" maxlength="12" required="required" class="modal-form-input" placeholder="Password">
+                  <input name="secreateKey" id="secreateKey" type="password" maxlength="12"  class="modal-form-input" placeholder="Password">
                 </div>
                  <div class="modal-form-group">
                   <i class="input-icon material-icons">lock</i>
@@ -674,9 +674,7 @@
                 <i class="input-icon material-icons">account_circle</i>
                 <input name="fuser" id="fuser" type="text" class="modal-form-input" placeholder="Username/Email">
               </div>
-              <div class="modal-form-group">
-                <center><div id="forgotCaptcha"></div></center>
-              </div>
+              
               <div class="modal-form-group left">
                 <a class="login-link">Back to Login</a>
               </div>
@@ -689,8 +687,8 @@
                 <p class="left">Reset Password.</p>
               </div>
               <div class="modal-form-group">
-                <i class="input-icon material-icons">phone</i>
-                <input name="fuser" id="fuser" type="text" class="modal-form-input" placeholder="enter otp">
+                <i class="input-icon material-icons">lock</i>
+                <input name="otp" id="otp" type="text" class="modal-form-input" placeholder="enter otp">
               </div>
               <div class="modal-form-group">
                 <i class="input-icon material-icons">lock</i>
@@ -825,8 +823,14 @@
         	request.email=$("#fuser").val();
         	url= 'http://localhost:8089/Demo/forogtPassword?email='+request.email;
         	request={};
+          }else if(e.target.id=="resetPassword"){
+        	url= "http://localhost:8089/Demo/resetPassword";
+        	request.email=$("#fuser").val();
+        	request.repassword=$("#restPass").val();
+        	request.password=$("#pass").val();
+        	request.otp=$("#otp").val();
           }
-          
+         
           $.ajax({
             type: "POST",
             url: url,
@@ -868,6 +872,19 @@
               }else if(e.target.id=="Forgot"){
              		$('#resetPasswordDiv').show();
              		$('#ForgotDiv').hide();
+             		if(data.fatalError){
+             			this1.find(".extra").after("<p class=\"error\" style=\"background-color: red;\">"+data.message.email+"</p>");	
+             		}else{
+              			this1.find(".extra").after("<p class=\"error\" style=\"background-color: green;\">"+data.message.otp+"</p>");
+             		}
+             		
+             	}else  if(e.target.id=="resetPassword"){
+             		if(data.fatalError){
+             			this1.find(".extra").after("<p class=\"error\" style=\"background-color: red;\">"+data.message.restPasswordSuccess+"</p>");	
+             		}else{
+              			this1.find(".extra").after("<p class=\"error\" style=\"background-color: green;\">"+data.message.restPasswordSuccess+"</p>");
+             		}
+             	
              	}
            },
             error: function(jqXHR, exception, errorThrown) {

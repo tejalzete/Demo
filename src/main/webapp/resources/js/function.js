@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	alert("function js loaded");
+	
 
 	$('#select_city2').on('change',	function() {
 		$.ajax({

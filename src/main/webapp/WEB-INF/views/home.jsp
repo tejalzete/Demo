@@ -540,7 +540,7 @@
 				pauseOnHover : 'immediate'
 			};
 			$('#ticker-1').carouFredSel({
-				width : 1000,
+	d			width : 1000,
 				align : false,
 				items : {
 					width : 'variable',
