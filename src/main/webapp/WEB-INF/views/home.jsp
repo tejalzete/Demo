@@ -67,7 +67,7 @@
 				<!-- Wrapper for slides -->
 
 				<div class="item active">
-					<img src="<%=request.getContextPath()%>/resources/images/slider/1.jpg" class="img-responsive" alt="slider1">
+					<img src="./resources/images/slider/1.jpg" class="img-responsive" alt="slider1">
 					<div class="carousel-caption">
 						<h3>CORRUPTION IS A GRAVER ISSUE FOR INDIA THAN SECULARISM</h3>
 						<p>The Lok Sabha 2014 Elections will be one of the most
@@ -86,17 +86,17 @@
 		<div class="row">
 			<div class="col-md-4 col-sm-4 col-xs-12 nopadding">
 				<a href="election-day#vote"><img
-					src="<%=request.getContextPath()%>/resources/images/battle/battleground1.jpg"
+					src="./resources/images/battle/battleground1.jpg"
 					class="img-responsive width100" alt="nitin" /> </a>
 			</div>
 			<div class="col-md-4 col-sm-4 col-xs-12 nopadding">
 				<a href="election-day#voter"><img
-					src="<%=request.getContextPath()%>/resources/images/battle/battleground2.jpg"
+					src="./resources/images/battle/battleground2.jpg"
 					class="img-responsive width100" alt="nitin" /></a>
 			</div>
 			<div class="col-md-4 col-sm-4 col-xs-12 nopadding">
 				<a href="election-day#election"><img
-					src="<%=request.getContextPath()%>/resources/images/battle/battleground3.jpg"
+					src="./resources/images/battle/battleground3.jpg"
 					class="img-responsive width100" alt="nitin" /></a>
 			</div>
 		</div>
@@ -104,7 +104,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4 col-xs-12">
-						<img src="<%=request.getContextPath()%>/resources/images/battle-homeicon.png"
+						<img src="./resources/images/battle-homeicon.png"
 							class="img-responsive battle-homeicon" alt="" />
 					</div>
 					<div class="col-md-8 col-xs-12 pull-right">
@@ -116,7 +116,7 @@
         </select> -->
 							<div class="clearfix"></div>
 							<p>
-								READ THE ELECTION DAY ESSENTIALS. <span>DON’T JUST
+								READ THE ELECTION DAY ESSENTIALS. <span>DON'T JUST
 									VOTE, VOTE RIGHT!&nbsp;</span>
 							</p>
 							<div class="row ">
@@ -162,7 +162,7 @@
 
 							<div class="item active">
 								<div class="col-xs-12 col-sm-6 col-md-4 pl">
-									<a href="candidate/nana-kate"><img src="<%=request.getContextPath()%>/resources/images/1_7.jpg"
+									<a href="candidate/nana-kate"><img src="./resources/images/1_7.jpg"
 										class="img-responsive center-block"></a>
 									<h3 class="text-center">Nana Kate</h3>
 									<h5 class="text-center">NCP Party</h5>
@@ -175,7 +175,7 @@
 							<div class="item ">
 								<div class="col-xs-12 col-sm-6 col-md-4 pl">
 									<a href="candidate/tingare-sunil-vijay"><img
-										src="<%=request.getContextPath()%>/resources/images/26047377_1657268164334358_2494437184728481683_n.jpg"
+										src="./resources/images/26047377_1657268164334358_2494437184728481683_n.jpg"
 										class="img-responsive center-block"></a>
 									<h3 class="text-center">Tingare Sunil Vijay</h3>
 									<h5 class="text-center">NCP Party</h5>
@@ -203,66 +203,41 @@
 	</section>
 
 
-
+<a href="#" id="prev" title="Show previous"> </a>
 	<div class="blog-section">
-		<a href=""><img src="<%=request.getContextPath()%>/resources/images/index-blog.png"
+		<a href=""><img src="./resources/images/index-blog.png"
 			class="index_blog_img" alt="" /></a>
 		<div id="carousel">
 			<a
 				href="blogs/who-will-be-next-himachal-pradesh-cm-bjp-central-observers-to-arrive-in-shimla-today"><img
-				src="<%=request.getContextPath()%>/resources/images/blog/648935-thakur-nadda-1.jpg" alt="building4"
+				src="./resources/images/blog/648935-thakur-nadda-1.jpg" alt="building4"
 				width="719" height="301" /></a> <a
 				href="blogs/sena-dishes-out-advice-to-bjp-post-its-gujarat-himachal-wins-jd-u-too-has-something-to-say"><img
-				src="<%=request.getContextPath()%>/resources/images/blog/PTI12_18_2017_000219B.jpg" alt="building4"
+				src="./resources/images/blog/PTI12_18_2017_000219B.jpg" alt="building4"
 				width="719" height="301" /></a>
-			<!-- <img src="images/blog/AAP_SecondCarousal.jpg" alt="building4" width="719" height="301" />
-    <img src="images/blog/PaidMedia_Carousal.jpg" alt="building4" width="719" height="301" />
-   <img src="images/blog/Blog-5.jpg" alt="building1" width="719" height="301" />
-
-   <img src="images/blog/Blog-2.jpg" alt="building2" width="719" height="301" />
-   <img src="images/blog/Blog-3.jpg" alt="building3" width="719" height="301" />
-   <img src="images/blog/Blog-4.jpg" alt="building4" width="719" height="301" /> -->
+			
 			<a
 				href="blogs/with-rahul-at-helm-in-congress-pm-modi-calls-for-promotion-of-youth-in-bjp"><img
-				src="<%=request.getContextPath()%>/resources/images/blog/amit-shah-PM-Modi.jpg" alt="building4" width="719"
+				src="./resources/images/blog/amit-shah-PM-Modi.jpg" alt="building4" width="719"
 				height="301" /></a>
-			<!-- <img src="images/blog/AAP_SecondCarousal.jpg" alt="building4" width="719" height="301" />
-    <img src="images/blog/PaidMedia_Carousal.jpg" alt="building4" width="719" height="301" />
-   <img src="images/blog/Blog-5.jpg" alt="building1" width="719" height="301" />
-
-   <img src="images/blog/Blog-2.jpg" alt="building2" width="719" height="301" />
-   <img src="images/blog/Blog-3.jpg" alt="building3" width="719" height="301" />
-   <img src="images/blog/Blog-4.jpg" alt="building4" width="719" height="301" /> -->
+			
 			<a
 				href="blogs/gujarat-elections-tracing-congress-campaign-strategy-and-bjp-s-responses"><img
-				src="<%=request.getContextPath()%>/resources/images/blog/supporters-elections-assembly-election-president-opposition-congress_6c0d2f16-dfa5-11e7-8c02-0f57a5c79e45.jpg"
+				src="./resources/images/blog/supporters-elections-assembly-election-president-opposition-congress_6c0d2f16-dfa5-11e7-8c02-0f57a5c79e45.jpg"
 				alt="building4" width="719" height="301" /></a>
-			<!-- <img src="images/blog/AAP_SecondCarousal.jpg" alt="building4" width="719" height="301" />
-    <img src="images/blog/PaidMedia_Carousal.jpg" alt="building4" width="719" height="301" />
-   <img src="images/blog/Blog-5.jpg" alt="building1" width="719" height="301" />
-
-   <img src="images/blog/Blog-2.jpg" alt="building2" width="719" height="301" />
-   <img src="images/blog/Blog-3.jpg" alt="building3" width="719" height="301" />
-   <img src="images/blog/Blog-4.jpg" alt="building4" width="719" height="301" /> -->
+			
 			<a
 				href="blogs/a-little-bit-of-arvind-kejriwal-in-rahul-gandhi-s-gujarat-election-campaign"><img
-				src="<%=request.getContextPath()%>/resources/images/blog/rahul-gandhi-arvind-kejriwal-pti-875.png"
+				src="./resources/images/blog/rahul-gandhi-arvind-kejriwal-pti-875.png"
 				alt="building4" width="719" height="301" /></a>
-			<!-- <img src="images/blog/AAP_SecondCarousal.jpg" alt="building4" width="719" height="301" />
-    <img src="images/blog/PaidMedia_Carousal.jpg" alt="building4" width="719" height="301" />
-   <img src="images/blog/Blog-5.jpg" alt="building1" width="719" height="301" />
-
-   <img src="images/blog/Blog-2.jpg" alt="building2" width="719" height="301" />
-   <img src="images/blog/Blog-3.jpg" alt="building3" width="719" height="301" />
-   <img src="images/blog/Blog-4.jpg" alt="building4" width="719" height="301" /> -->
-		</div>
-		<a href="#" id="prev" title="Show previous"> </a> <a href="#"
-			id="next" title="Show next"> </a>
+				</div>
+		
+		
 		<div class="relative">
 			<div id="pager"></div>
 		</div>
 	</div>
-
+ <a href="#" id="next" title="Show next"> </a>
 
 
 	<div class="campaign-section"></div>

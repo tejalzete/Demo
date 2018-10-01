@@ -617,39 +617,28 @@
               </form>
             </section>
             <section id="content2">
-              <form method="POST" class="login-form"  id="Register"><!-- 1 -->
+              <form method="POST" class="login-form"  id="Register">
                 <div class="modal-form-group">
                   <div class="extra"></div>
                 </div>
                 <input name="user_Id" id="user_id" type="hidden" required="required" class="modal-form-input" >
-<!--                 <div class="modal-form-group"> -->
-<!--                   <i class="input-icon material-icons">account_circle</i> -->
-<!--                   <input name="name" id="name" type="text" required="required" class="modal-form-input" placeholder="Username"> -->
-<!--                 </div> -->
                 <div class="modal-form-group">
                   <i class="input-icon material-icons">email</i>
-                  <input name="email" id="email" type="email" maxlength="60" lengthrequired="required" class="modal-form-input" placeholder="E-mail">
+                  <input name="email" id="email" type="email" maxlength="60" required="required" class="modal-form-input" placeholder="E-mail">
                 </div>
                 <div class="modal-form-group">
                   <i class="input-icon material-icons">lock</i>
-                  <input name="secreateKey" id="secreateKey" type="password" maxlength="12" required="required" class="modal-form-input" placeholder="Password">
+                  <input name="secreateKey" id="secreateKey" type="password" maxlength="12"  class="modal-form-input" placeholder="Password">
                 </div>
                  <div class="modal-form-group">
                   <i class="input-icon material-icons">lock</i>
                   <input name="repassword" id="repassword" type="password" maxlength="12" required="required" class="modal-form-input" placeholder="Confirm Password">
                 </div>
-<!--                 <div class="modal-form-group"> -->
-<!--                   <i class="input-icon material-icons">account_circle</i> -->
-<!--                   <input name="display_name" id="display_name" type="text" required="required" class="modal-form-input" placeholder="Display Name"> -->
-<!--                 </div> -->
+
                 <div class="modal-form-group">
                   <i class="input-icon material-icons">phone</i>
                   <input name="contact" id="contact" type="text" required="required"  maxlength="10" class="modal-form-input" placeholder="mobile no">
                 </div>
-                
-<!--                 <div class="modal-form-group"> -->
-<!--                   <center><div id="registerCaptcha"></div></center> -->
-<!--                 </div> -->
                 <button class="btn btn-green signup-button" type="submit" id="signUp">Sign Up</button>
               </form>
             </section>
@@ -672,8 +661,8 @@
               </div>
             </div>
           </div>
-          <div class="forgot-div">
-            <form class="login-form" id="Forgot"><!-- 2 -->
+          <div class="forgot-div" id="ForgotDiv">
+            <form class="login-form" id="Forgot">
               <input type="hidden" name="reqType" value="Forgot">
               <div class="modal-form-group">
                 <div class="extra"></div>
@@ -683,11 +672,33 @@
               </div>
               <div class="modal-form-group">
                 <i class="input-icon material-icons">account_circle</i>
-                <input name="user" id="fuser" type="text" class="modal-form-input" placeholder="Username/Email">
+                <input name="fuser" id="fuser" type="text" class="modal-form-input" placeholder="Username/Email">
+              </div>
+              
+              <div class="modal-form-group left">
+                <a class="login-link">Back to Login</a>
+              </div>
+              <button class="btn btn-green center reset-button" type="submit">Send OTP</button>
+            </form>
+            </div>
+            <div class="reset-password" id="resetPasswordDiv">
+            <form class="login-form" id="resetPassword">
+              <div class="modal-form-group">
+                <p class="left">Reset Password.</p>
               </div>
               <div class="modal-form-group">
-                <center><div id="forgotCaptcha"></div></center>
+                <i class="input-icon material-icons">lock</i>
+                <input name="otp" id="otp" type="text" class="modal-form-input" placeholder="enter otp">
               </div>
+              <div class="modal-form-group">
+                <i class="input-icon material-icons">lock</i>
+                <input name="pass" id="pass" type="password" class="modal-form-input" placeholder="password">
+              </div>
+              <div class="modal-form-group">
+                <i class="input-icon material-icons">lock</i>
+                <input name="restPass" id="restPass" type="password" class="modal-form-input" placeholder="confirm password">
+              </div>
+              
               <div class="modal-form-group left">
                 <a class="login-link">Back to Login</a>
               </div>
@@ -748,6 +759,8 @@
      
       $(document).ready(function(){
     	
+    	  
+  		  
     	  // dismiss modal when click on close icon.
         $('body').on('click', '.close', function(){
           $(this).closest('.login-modal-div').fadeOut('fast');
@@ -761,13 +774,17 @@
         $('body').on('click', '.login-link, .forgot-link', function(){
           if($(this).hasClass('login-link')){
             $('.forgot-div').slideUp();
+            
             $('.login-register-div').slideDown();
           }
           else{
             $('.login-register-div').slideUp();
             $('.forgot-div').slideDown();
+            $('#resetPasswordDiv').hide();
           }
         });
+    	  
+       
 
         // redirect function.
         function redirect(where) {
@@ -803,10 +820,17 @@
           	request.repassword=$("#repassword").val();
           	request.mobileno=$("#contact").val();
           }else if(e.target.id=="Forgot"){
-        	url= 'http://localhost:8089/Demo/forgot'; 
-        	request.email=$("#email").val();
+        	request.email=$("#fuser").val();
+        	url= 'http://localhost:8089/Demo/forogtPassword?email='+request.email;
+        	request={};
+          }else if(e.target.id=="resetPassword"){
+        	url= "http://localhost:8089/Demo/resetPassword";
+        	request.email=$("#fuser").val();
+        	request.repassword=$("#restPass").val();
+        	request.password=$("#pass").val();
+        	request.otp=$("#otp").val();
           }
-          
+         
           $.ajax({
             type: "POST",
             url: url,
@@ -826,7 +850,7 @@
             		alert("Login successfully");
             	}
               }
-             if(e.target.id==="Register"){
+              else if(e.target.id==="Register"){
             	 if(data.fatalError){
             		if(data.message.mobile!=undefined)
             		this1.find("#contact").after("<p class=\"error\" style=\"background-color: red;\">"+data.message.mobile+"</p>"); 
@@ -845,7 +869,23 @@
              		}
                  		
              	}
-            }
+              }else if(e.target.id=="Forgot"){
+             		$('#resetPasswordDiv').show();
+             		$('#ForgotDiv').hide();
+             		if(data.fatalError){
+             			this1.find(".extra").after("<p class=\"error\" style=\"background-color: red;\">"+data.message.email+"</p>");	
+             		}else{
+              			this1.find(".extra").after("<p class=\"error\" style=\"background-color: green;\">"+data.message.otp+"</p>");
+             		}
+             		
+             	}else  if(e.target.id=="resetPassword"){
+             		if(data.fatalError){
+             			this1.find(".extra").after("<p class=\"error\" style=\"background-color: red;\">"+data.message.restPasswordSuccess+"</p>");	
+             		}else{
+              			this1.find(".extra").after("<p class=\"error\" style=\"background-color: green;\">"+data.message.restPasswordSuccess+"</p>");
+             		}
+             	
+             	}
            },
             error: function(jqXHR, exception, errorThrown) {
               this1.find('input[type=submit]').attr('disabled', false);
