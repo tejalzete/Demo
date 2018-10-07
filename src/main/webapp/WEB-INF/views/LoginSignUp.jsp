@@ -793,18 +793,16 @@
         	$('#loginform1').show();
         })
         
-        //toggle between forgot div and login div.
-        $('body').on('click', '.login-link, .forgot-link', function(){
-          if($(this).hasClass('login-link')){
-            
-            $('.login-register-div').slideDown();
-          }
-          if($(this).hasClass('forgot-link')){
-              $('.forgot-div').slideDown();
-              
-            
-            }
-         });
+            $('body').on('click', '.login-link, .forgot-link', function(){
+      if($(this).hasClass('login-link')){
+        $('.forgot-div').slideUp();
+        $('.login-register-div').slideDown();
+      }
+      else{
+        $('.login-register-div').slideUp();
+        $('.forgot-div').slideDown();
+      }
+    });
     	  
        
 
