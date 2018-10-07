@@ -110,40 +110,96 @@
 		</div>
 		</div>
 	</footer>
-	<script src="./resources/js/jquery.min.js"></script>
+	<script src="..resources/js/jquery.min.js"></script>
 
 <script>
 
+function emailv(userid)
+{
+	var electiontypea =$("#email").val();
 
+	  $.ajax({
+	            type: "POST",
+	            cache: false,
+	            url: "demoemail.php", /* The country id will be sent to this file */
+	            data: "email="+electiontypea+"&action=electionyear",
+	            success: function(msg){
+		            if(msg !=''){
+	                $(".erroremail").html(msg);
+	                $("#email1").val('');
+		            }else{
+		            $(".erroremail").html('');
+		            $("#email1").val(msg);
+		            }
+	            }
+	           });
+}
+    
+    	$(document).ready(function () {
+
+    	    jQuery.validator.addMethod("require_from_group", function (value, element, options) {
+    	        var numberRequired = options[0];
+    	        var selector = options[1];
+    	        var fields = $(selector, element.form);
+    	        var filled_fields = fields.filter(function () {
+    	            // it's more clear to compare with empty string
+    	            return $(this).val() != "";
+    	        });
+    	        var empty_fields = fields.not(filled_fields);
+    	        // we will mark only first empty field as invalid
+    	        if (filled_fields.length < numberRequired && empty_fields[0] == element) {
+    	            return false;
+    	        }
+    	        return true;
+    	        // {0} below is the 0th item in the options field
+    	    }, jQuery.format("Please fill out at least {0} of these fields."));
+
+    	    $('#contactformde').validate({ // initialize the plugin
+    	        groups: {
+    	            names: "mp mc"
+    	        },
+    	        rules: {
+    	            mp: {
+    	                require_from_group: [1, ".send"]
+    	            },
+    	            mc: {
+    	                require_from_group: [1, ".send"]
+    	            }
+    	        }
+    	    });
+
+
+
+    	});
 
 
 </script>
- <script src="./resources/js/jquery-ui.js"></script>
- <script type="text/javascript" src="./resources/js/jquery.validate.min.js"> </script>
+ <script src="http://www.risingelection.com/js/jquery-ui.js"></script>
+ <script type="text/javascript" src="http://www.risingelection.com/js/jquery.validate.min.js"> </script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="./resources/js/bootstrap.min.js"></script>
-<script src="./resources/js/lightbox.js"></script>
+<script src="http://www.risingelection.com/js/bootstrap.min.js"></script>
+<script src="http://www.risingelection.com/js/lightbox.js"></script>
 
-<script src="./resources/js/jquery.fancybox.js"></script>
-<script src="./resources/js/jquery.fancybox.pack.js"></script>
+<script src="http://www.risingelection.com/js/jquery.fancybox.js"></script>
+<script src="http://www.risingelection.com/js/jquery.fancybox.pack.js"></script>
 
-<script type="text/javascript" src="./resources/js/jquery.mousewheel.pack.js"></script>
+<script type="text/javascript" src="http://www.risingelection.com/js/jquery.mousewheel.pack.js"></script>
 
   <!-- Add fancyBox main JS and CSS files -->
-  <script type="text/javascript" src="./resources/js/jquery.fancybox.pack.js"></script>
-  <link rel="stylesheet" type="text/css" href="./resources/css/jquery.fancybox.css" media="screen" />
+  <script type="text/javascript" src="http://www.risingelection.com/js/jquery.fancybox.pack.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://www.risingelection.com/css/jquery.fancybox.css" media="screen" />
 
   <!-- Add Button helper (this is optional) -->
-  <link rel="stylesheet" type="text/css" href="./resources/css/jquery.fancybox-buttons.css" />
-  <script type="text/javascript" src="./resources/js/jquery.fancybox-buttons.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://www.risingelection.com/css/jquery.fancybox-buttons.css" />
+  <script type="text/javascript" src="http://www.risingelection.com/js/jquery.fancybox-buttons.js"></script>
 
   <!-- Add Thumbnail helper (this is optional) -->
-  <link rel="stylesheet" type="text/css" href="./resources/css/jquery.fancybox-thumbs.css" />
-  <script type="text/javascript" src="./resources/js/jquery.fancybox-thumbs.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://www.risingelection.com/css/jquery.fancybox-thumbs.css" />
+  <script type="text/javascript" src="http://www.risingelection.com/js/jquery.fancybox-thumbs.js"></script>
 
   <!-- Add Media helper (this is optional) -->
-  <script type="text/javascript" src="./resources/js/jquery.fancybox-media.js"></script>
-<script type="text/javascript" src="./resources/js/jquery.carouFredSel.js"> </script>
+  <script type="text/javascript" src="http://www.risingelection.com/js/jquery.fancybox-media.js"></script>
+<script type="text/javascript" src="http://www.risingelection.com/js/jquery.carouFredSel.js"> </script>
 <script type="text/javascript">
       $(document).ready(function(){
         var date=new Date(); 
