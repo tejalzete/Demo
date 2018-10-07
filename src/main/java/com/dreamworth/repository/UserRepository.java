@@ -2,10 +2,10 @@ package com.dreamworth.repository;
 
 import java.util.Date;
 
-import com.dreamworth.repository.entity.AdvertiseEntity;
-import com.dreamworth.repository.entity.Comments;
-import com.dreamworth.repository.entity.QuestionEntity;
-import com.dreamworth.repository.entity.UserRegistrationEntity;
+import com.dreamworth.entity.AdvertiseEntity;
+import com.dreamworth.entity.Comments;
+import com.dreamworth.entity.QuestionEntity;
+import com.dreamworth.entity.UserRegistrationEntity;
 
 public interface UserRepository {
 	/**

@@ -1,4 +1,4 @@
-package com.dreamworth.repository.entity;
+package com.dreamworth.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

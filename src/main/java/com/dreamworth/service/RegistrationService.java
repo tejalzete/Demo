@@ -1,11 +1,10 @@
 package com.dreamworth.service;
 
-import com.dreamworth.controller.beans.AdvertiseRequestBean;
-import com.dreamworth.controller.beans.CommentRequestBean;
-import com.dreamworth.controller.beans.QuestionRequestBean;
-import com.dreamworth.controller.beans.ResetPasswordRequestBean;
-import com.dreamworth.controller.beans.UserRequestBean;
-import com.dreamworth.repository.entity.AdvertiseEntity;
+import com.dreamworth.beans.AdvertiseRequestBean;
+import com.dreamworth.beans.CommentRequestBean;
+import com.dreamworth.beans.QuestionRequestBean;
+import com.dreamworth.beans.ResetPasswordRequestBean;
+import com.dreamworth.beans.UserRequestBean;
 
 public interface RegistrationService {
 	/**

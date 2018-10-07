@@ -1,4 +1,4 @@
-package com.dreamworth.controller.beans;
+package com.dreamworth.beans;
 
 import java.util.HashMap;
 import java.util.Map;

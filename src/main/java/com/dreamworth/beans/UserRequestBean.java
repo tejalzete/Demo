@@ -1,6 +1,4 @@
-package com.dreamworth.controller.beans;
-
-
+package com.dreamworth.beans;
 public class UserRequestBean {
 
 	private String email; 

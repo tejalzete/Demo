@@ -1,4 +1,4 @@
-package com.dreamworth.controller.beans;
+package com.dreamworth.beans;
 
 public class CommentRequestBean {
 

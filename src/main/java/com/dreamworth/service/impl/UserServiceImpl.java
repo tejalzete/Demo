@@ -1,22 +1,20 @@
 package com.dreamworth.service.impl;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.dreamworth.controller.beans.AdvertiseRequestBean;
-import com.dreamworth.controller.beans.CommentRequestBean;
-import com.dreamworth.controller.beans.QuestionRequestBean;
-import com.dreamworth.controller.beans.ResetPasswordRequestBean;
-import com.dreamworth.controller.beans.UserRequestBean;
+import com.dreamworth.beans.AdvertiseRequestBean;
+import com.dreamworth.beans.CommentRequestBean;
+import com.dreamworth.beans.QuestionRequestBean;
+import com.dreamworth.beans.ResetPasswordRequestBean;
+import com.dreamworth.beans.UserRequestBean;
+import com.dreamworth.entity.AdvertiseEntity;
+import com.dreamworth.entity.Comments;
+import com.dreamworth.entity.QuestionEntity;
+import com.dreamworth.entity.UserRegistrationEntity;
 import com.dreamworth.repository.UserRepository;
-import com.dreamworth.repository.entity.AdvertiseEntity;
-import com.dreamworth.repository.entity.Comments;
-import com.dreamworth.repository.entity.QuestionEntity;
-import com.dreamworth.repository.entity.UserRegistrationEntity;
 import com.dreamworth.service.RegistrationService;
 
 @Service

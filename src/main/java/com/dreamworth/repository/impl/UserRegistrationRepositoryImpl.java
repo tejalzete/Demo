@@ -10,11 +10,11 @@ import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
+import com.dreamworth.entity.AdvertiseEntity;
+import com.dreamworth.entity.Comments;
+import com.dreamworth.entity.QuestionEntity;
+import com.dreamworth.entity.UserRegistrationEntity;
 import com.dreamworth.repository.UserRepository;
-import com.dreamworth.repository.entity.AdvertiseEntity;
-import com.dreamworth.repository.entity.Comments;
-import com.dreamworth.repository.entity.QuestionEntity;
-import com.dreamworth.repository.entity.UserRegistrationEntity;
 import com.dreamworth.util.HibernateUtil;
 
 @Repository

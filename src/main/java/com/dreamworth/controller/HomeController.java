@@ -12,15 +12,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.dreamworth.controller.beans.AdvertiseRequestBean;
-import com.dreamworth.controller.beans.CommentRequestBean;
-import com.dreamworth.controller.beans.LoginRequestBean;
-import com.dreamworth.controller.beans.QuestionRequestBean;
-import com.dreamworth.controller.beans.ResetPasswordRequestBean;
-import com.dreamworth.controller.beans.Response;
-import com.dreamworth.controller.beans.UserRequestBean;
+import com.dreamworth.beans.AdvertiseRequestBean;
+import com.dreamworth.beans.CommentRequestBean;
+import com.dreamworth.beans.LoginRequestBean;
+import com.dreamworth.beans.QuestionRequestBean;
+import com.dreamworth.beans.ResetPasswordRequestBean;
+import com.dreamworth.beans.Response;
+import com.dreamworth.beans.UserRequestBean;
 import com.dreamworth.service.RegistrationService;
-import com.dreamworth.util.SendSMS;
 
 @Controller
 public class HomeController {

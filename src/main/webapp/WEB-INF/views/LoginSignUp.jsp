@@ -591,6 +591,7 @@
           
             <input id="tab2" type="radio" name="tabs">
             <label class="tab-label" for="tab2">Sign Up</label>
+            
 
             <section id="content1">
               <form method="POST" class="login-form" id="Login"><!-- 3 -->
@@ -615,6 +616,24 @@
                 </div>
                 <button class="btn btn-green signin-button" type="submit" id="signin">Sign In</button>
               </form>
+              <div class="social-signin-div">
+              <div class="social-divider">
+                <span>or</span>
+              </div>
+              <div class="google-div social-div pull-left">
+                <a id="glogin" href="javascript:void(0)" class="btn btn-social btn-google">
+                  <span class="fa fa-google"></span>Google
+                </a>
+              </div>
+              <div class="facebook-div social-div">
+                <a id="fblogin" href="javascript:void(0)" class="btn btn-social btn-facebook">
+                  <span class="fa fa-facebook"></span>Facebook
+                </a>  
+              </div>
+              <div class="tnc-div">
+                  By creating this account, you agree to our <a href="https://www..org/privacy-policy/" target="_blank">Privacy Policy</a> & <a href="https://www..org/cookie-policy/" target="_blank">Cookie Policy</a>.
+              </div>
+            </div>
             </section>
             <section id="content2">
               <form method="POST" class="login-form"  id="Register">
@@ -641,8 +660,7 @@
                 </div>
                 <button class="btn btn-green signup-button" type="submit" id="signUp">Sign Up</button>
               </form>
-            </section>
-            <div class="social-signin-div">
+              <div class="social-signin-div">
               <div class="social-divider">
                 <span>or</span>
               </div>
@@ -660,9 +678,10 @@
                   By creating this account, you agree to our <a href="https://www..org/privacy-policy/" target="_blank">Privacy Policy</a> & <a href="https://www..org/cookie-policy/" target="_blank">Cookie Policy</a>.
               </div>
             </div>
-          </div>
-          <div class="forgot-div" id="ForgotDiv">
-            <form class="login-form" id="Forgot">
+            </section>
+            <section id="content3">
+            <form class="login-form forgot-link" id="Forgot">
+            <div class="forgot-div" id="ForgotDiv"></div>
               <input type="hidden" name="reqType" value="Forgot">
               <div class="modal-form-group">
                 <div class="extra"></div>
@@ -680,9 +699,10 @@
               </div>
               <button class="btn btn-green center reset-button" type="submit">Send OTP</button>
             </form>
-            </div>
-            <div class="reset-password" id="resetPasswordDiv">
+            </section>
+            <section id="content4">
             <form class="login-form" id="resetPassword">
+            <div class="reset-password" id="resetPasswordDiv"></div>
               <div class="modal-form-group">
                 <p class="left">Reset Password.</p>
               </div>
@@ -704,7 +724,10 @@
               </div>
               <button class="btn btn-green center reset-button" type="submit">Reset Password</button>
             </form> 
+          </section>
+            
           </div>
+          
         </div>
       </div>
     </div>
@@ -773,16 +796,15 @@
         //toggle between forgot div and login div.
         $('body').on('click', '.login-link, .forgot-link', function(){
           if($(this).hasClass('login-link')){
-            $('.forgot-div').slideUp();
             
             $('.login-register-div').slideDown();
           }
-          else{
-            $('.login-register-div').slideUp();
-            $('.forgot-div').slideDown();
-            $('#resetPasswordDiv').hide();
-          }
-        });
+          if($(this).hasClass('forgot-link')){
+              $('.forgot-div').slideDown();
+              
+            
+            }
+         });
     	  
        
 

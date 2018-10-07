@@ -19,10 +19,10 @@
 		<property name="hibernate.hbm2ddl.auto">update</property>
 <!--  		<property name="hibernate.default_schema">SYSTEM</property> -->
 	<property name="javax.persistence.schema-generation.database.action">create</property>
-		<mapping class="com.dreamworth.repository.entity.UserRegistrationEntity" />
-		<mapping class="com.dreamworth.repository.entity.Comments" />
-		<mapping class="com.dreamworth.repository.entity.QuestionEntity" />
-		<mapping class="com.dreamworth.repository.entity.AdvertiseEntity" />
+		<mapping class="com.dreamworth.entity.UserRegistrationEntity" />
+		<mapping class="com.dreamworth.entity.Comments" />
+		<mapping class="com.dreamworth.entity.QuestionEntity" />
+		<mapping class="com.dreamworth.entity.AdvertiseEntity" />
 		
 		
 	</session-factory>
