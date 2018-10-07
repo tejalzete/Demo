@@ -679,9 +679,10 @@
               </div>
             </div>
             </section>
-            <section id="content3">
+          </div>
+            
             <form class="login-form forgot-link" id="Forgot">
-            <div class="forgot-div" id="ForgotDiv"></div>
+            
               <input type="hidden" name="reqType" value="Forgot">
               <div class="modal-form-group">
                 <div class="extra"></div>
@@ -699,10 +700,10 @@
               </div>
               <button class="btn btn-green center reset-button" type="submit">Send OTP</button>
             </form>
-            </section>
-            <section id="content4">
+            
+            
             <form class="login-form" id="resetPassword">
-            <div class="reset-password" id="resetPasswordDiv"></div>
+            
               <div class="modal-form-group">
                 <p class="left">Reset Password.</p>
               </div>
@@ -724,9 +725,6 @@
               </div>
               <button class="btn btn-green center reset-button" type="submit">Reset Password</button>
             </form> 
-          </section>
-            
-          </div>
           
         </div>
       </div>
@@ -781,7 +779,10 @@
 
      
       $(document).ready(function(){
-    	
+    	  $('#Forgot').hide();
+    	  $('#resetPassword').hide();
+    		
+    	  
     	  
   		  
     	  // dismiss modal when click on close icon.
@@ -800,7 +801,9 @@
       }
       else{
         $('.login-register-div').slideUp();
-        $('.forgot-div').slideDown();
+        $('#Forgot').show();
+  	  	$('#resetPassword').hide();
+	 
       }
     });
     	  
@@ -890,11 +893,13 @@
                  		
              	}
               }else if(e.target.id=="Forgot"){
-             		$('#resetPasswordDiv').show();
-             		$('#ForgotDiv').hide();
+             		
+             		
              		if(data.fatalError){
              			this1.find(".extra").after("<p class=\"error\" style=\"background-color: red;\">"+data.message.email+"</p>");	
              		}else{
+             			$('#ForgotDiv').hide();
+             			$('#resetPassword').show();
               			this1.find(".extra").after("<p class=\"error\" style=\"background-color: green;\">"+data.message.otp+"</p>");
              		}
              		
