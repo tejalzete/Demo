@@ -681,7 +681,7 @@
             </section>
           </div>
             
-            <form class="login-form forgot-link" id="Forgot">
+            <form class="login-form" id="Forgot">
             
               <input type="hidden" name="reqType" value="Forgot">
               <div class="modal-form-group">
@@ -781,9 +781,6 @@
       $(document).ready(function(){
     	  $('#Forgot').hide();
     	  $('#resetPassword').hide();
-    		
-    	  
-    	  
   		  
     	  // dismiss modal when click on close icon.
         $('body').on('click', '.close', function(){
@@ -794,20 +791,24 @@
         	$('#loginform1').show();
         })
         
-            $('body').on('click', '.login-link, .forgot-link', function(){
-      if($(this).hasClass('login-link')){
-        $('.forgot-div').slideUp();
-        $('.login-register-div').slideDown();
-      }
-      else{
-        $('.login-register-div').slideUp();
-        $('#Forgot').show();
-  	  	$('#resetPassword').hide();
-	 
-      }
-    });
-    	  
-       
+		$('body').on('click', '.login-link', function(){
+	      if($(this).hasClass('login-link')){
+	        $('.forgot-div').slideUp();
+	        $('.login-register-div').slideDown();
+	    	$('#Forgot').hide();
+	    	$('#resetPassword').hide();
+
+	      }
+	    });
+        
+        $('body').on('click','.forgot-link', function(){
+  
+  		if($(this).hasClass('forgot-link')){
+	    	$('.login-register-div').slideUp();
+	    	$('#Forgot').show();
+		  	$('#resetPassword').hide();
+ 		}
+	});
 
         // redirect function.
         function redirect(where) {
