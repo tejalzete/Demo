@@ -574,7 +574,7 @@
       }
     </style>
   </head>
-  <body >
+  <body>
     <div class="spinner-loading-overlay"></div>
     <div class="login-modal-div" id="loginform1" style="display: none;">
       <div class="modal-content">
@@ -938,8 +938,6 @@
         });
 
       });
-    </script>
-    
-    
+    </script>   
   </body>
 </html>

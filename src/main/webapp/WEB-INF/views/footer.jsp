@@ -45,7 +45,7 @@
 							<li><a href="./view?name=faq">FAQ</a></li>
 						</ul>
 					</div>
-				</div>s
+				</div>
 			</div>
 
 		</div>
