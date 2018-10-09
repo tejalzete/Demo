@@ -203,7 +203,7 @@
 	</section>
 
 
-<a href="#" id="prev" title="Show previous"> </a>
+<!-- <a href="#" id="prev" title="Show previous"> </a> -->
 	<div class="blog-section">
 		<a href=""><img src="./resources/images/index-blog.png"
 			class="index_blog_img" alt="" /></a>
@@ -237,7 +237,7 @@
 			<div id="pager"></div>
 		</div>
 	</div>
- <a href="#" id="next" title="Show next"> </a>
+<!--  <a href="#" id="next" title="Show next"> </a> -->
 
 
 	<div class="campaign-section"></div>
@@ -307,10 +307,11 @@
 			</div>
 		</div>
 	</div>
-<<<<<<< HEAD
-=======
-	<%@include file="footer.jsp" %>
+
+<%-- 	<%@include file="footer.jsp" %> --%>
 	<!-- Modal -->
+	<%@include file="footer.jsp"%>
+</body>
 	
 	<script>
 		$(function() {
@@ -560,9 +561,7 @@
 							});
 				});
 	</script>
->>>>>>> branch 'master' of https://github.com/tejalzete/Demo.git
-</body>
-
-  <%@include file="election_footer.jsp"%>
-	  <%@include file="commons_script.jsp"%>
+ 
+ 
+<%-- 	  <%@include file="commons_script.jsp"%> --%>
     

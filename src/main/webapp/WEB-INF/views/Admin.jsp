@@ -88,7 +88,8 @@
                     </ul>
                 </div>
             </nav>
-        </header>      <div class="wrapper row-offcanvas row-offcanvas-left">
+        </header>     
+         <div class="wrapper row-offcanvas row-offcanvas-left">
          <aside class="left-side sidebar-offcanvas">
             <section class=sidebar>
                <div class="wrapper row-offcanvas row-offcanvas-left">
@@ -4142,7 +4143,7 @@ $(function() {
             	          $("#select_city6").html(msg);
             	      }
             	     });
-            	})
+            	});
           
         </script>
 
