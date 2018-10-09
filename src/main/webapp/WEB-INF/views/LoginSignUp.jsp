@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="https://www..org/gfg.png" type="image/x-icon" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" async></script>
-    <link rel="stylesheet" href="https://auth..org/css/bootstrap-social.css">
+    <link rel="stylesheet" href="./resources/css/bootstrap-social.css">
     <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
     <script src="https://apis.google.com/js/platform.js" async></script>
     <title>Election</title>
@@ -739,7 +739,7 @@
 
   gtag('config', 'UA-112208093-1');
 </script>
-    <script src="https://auth..org/js/typeahead.bundle.min.js"></script>
+    <script src="./resources/js/typeahead.bundle.min.js"></script>
     <script>
       //google captch initialization for register/forgot section.
       var captchaSiteKey = '';
