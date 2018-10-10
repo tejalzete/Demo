@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="theme-color" content="#0f9d58" />
     <link rel="shortcut icon" href="https://www..org/gfg.png" type="image/x-icon" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./resources/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" async></script>
     <link rel="stylesheet" href="./resources/css/bootstrap-social.css">
     <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
@@ -14,7 +14,7 @@
     <title>Election</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://auth..org/css/typeahead.css">
+    <link rel="stylesheet" href="./resources/css/typeahead.css">
     <style>
       *,
       *:after,
@@ -742,19 +742,19 @@
     <script src="./resources/js/typeahead.bundle.min.js"></script>
     <script>
       //google captch initialization for register/forgot section.
-      var captchaSiteKey = '';
-      var forgotWidgetId;
-      var registerWidgetId;
-      var onloadCallback = function() {
-          // Renders the HTML element with id 'example1' as a reCAPTCHA widget.
-          // The id of the reCAPTCHA widget is assigned to 'widgetId1'.
-          registerWidgetId = grecaptcha.render('registerCaptcha', {
-            'sitekey' : captchaSiteKey,
-          });
-          forgotWidgetId = grecaptcha.render('forgotCaptcha', {
-            'sitekey' : captchaSiteKey
-          });
-      };
+//       var captchaSiteKey = '';
+//       var forgotWidgetId;
+//       var registerWidgetId;
+//       var onloadCallback = function() {
+//           // Renders the HTML element with id 'example1' as a reCAPTCHA widget.
+//           // The id of the reCAPTCHA widget is assigned to 'widgetId1'.
+//           registerWidgetId = grecaptcha.render('registerCaptcha', {
+//             'sitekey' : captchaSiteKey,
+//           });
+//           forgotWidgetId = grecaptcha.render('forgotCaptcha', {
+//             'sitekey' : captchaSiteKey
+//           });
+//       };
 
       // check required field.
       $('body').on('blur', 'input[required=required]', function(){

@@ -187,13 +187,14 @@
 						</div>
 						<div id="slider-control">
 							<a class="left carousel-control" href="#itemslider"
-								data-slide="prev"><img
-								src="https://s12.postimg.org/uj3ffq90d/arrow_left.png"
-								alt="Left" class="img-responsive"></a> <a
+								data-slide="prev">
+<!-- 								<img src="https://s12.postimg.org/uj3ffq90d/arrow_left.png" -->
+<!-- 								alt="Left" class="img-responsive"> -->
+								</a> <a
 								class="right carousel-control" href="#itemslider"
-								data-slide="next"><img
-								src="https://s12.postimg.org/djuh0gxst/arrow_right.png"
-								alt="Right" class="img-responsive"></a>
+								data-slide="next">
+<!-- 								<img src="https://s12.postimg.org/djuh0gxst/arrow_right.png" alt="Right" class="img-responsive"> -->
+</a>
 						</div>
 					</div>
 				</div>
